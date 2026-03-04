@@ -34,7 +34,7 @@ const TeamMembers = () => {
 
     return (
         <section className="w-full min-h-screen flex flex-col justify-center items-center py-32 border-t border-white/10" id="team">
-            <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 mb-12">
+            <div className="w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 mb-12 flex flex-col items-center md:items-start text-center md:text-left">
                 <h2 className="text-4xl md:text-6xl font-black tight-heading mb-4">Meet The Team</h2>
                 <p className="text-xl text-slate-400">The collective intelligence driving our projects.</p>
             </div>

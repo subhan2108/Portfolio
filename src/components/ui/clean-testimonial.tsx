@@ -181,7 +181,7 @@ export function Testimonial() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0, transition: { duration: 0.2 } }}
-                        className="text-2xl md:text-4xl font-black leading-[1.1] tracking-tight text-white uppercase italic"
+                        className="text-lg md:text-4xl font-black leading-[1.1] md:leading-[1.1] tracking-tight text-white uppercase italic"
                     >
                         <SplitText text={`"${currentTestimonial.quote}"`} />
                     </motion.blockquote>
@@ -230,11 +230,11 @@ export function Testimonial() {
                                     transition={{ duration: 0.4, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                                     style={{ originY: 0 }}
                                 />
-                                <span className="block text-lg font-black text-white uppercase tracking-tighter">
+                                <span className="block text-sm md:text-lg font-black text-white uppercase tracking-tighter">
                                     {currentTestimonial.author}
                                 </span>
-                                <span className="block text-xs text-primary mt-1 font-black uppercase tracking-[0.2em]">
-                                    {currentTestimonial.role} — {currentTestimonial.company}
+                                <span className="block text-[10px] md:text-xs text-primary mt-1 font-black uppercase tracking-[0.2em] leading-relaxed">
+                                    {currentTestimonial.role} — <br className="block sm:hidden" /> {currentTestimonial.company}
                                 </span>
                             </motion.div>
                         </AnimatePresence>

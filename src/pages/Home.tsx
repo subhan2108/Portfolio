@@ -6,8 +6,8 @@ import StickyFooter from '../components/ui/footer';
 import { Testimonial } from '../components/ui/clean-testimonial';
 import { Timeline } from '../components/ui/timeline';
 import { motion, AnimatePresence } from 'framer-motion';
-import DisplayCards from '../components/ui/display-cards';
-import { Layout, BarChart3, Users, ChevronDown } from 'lucide-react';
+import ExpandOnHover from '../components/ui/expand-cards';
+import { ChevronDown } from 'lucide-react';
 import HomeSkeleton from '../components/HomeSkeleton';
 
 const AccordionItem = ({ title, children, isOpen, onClick }: { title: string; children: React.ReactNode; isOpen: boolean; onClick: () => void }) => {
@@ -258,84 +258,28 @@ export default function Home() {
             </section>
 
             {/* What We Offer Section */}
-            <section className="py-24 md:py-48 bg-[#080808] border-y border-white/5 overflow-hidden" id="services">
-              <div className="max-w-[1400px] mx-auto px-6">
-                <div className="grid grid-cols-12 gap-12 items-center">
-                  <div className="col-span-12 lg:col-span-6">
-                    <motion.div
-                      initial={{ opacity: 0, x: -50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8 }}
-                    >
-                      <p className="text-[#9EFF00] font-black uppercase tracking-[0.4em] mb-6 text-sm">Services Architecture</p>
-                      <h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.8] mb-12">
-                        What I <br /><span className="text-white/40 italic">Offer</span>
-                      </h2>
-
-                      <div className="space-y-8">
-                        <div className="group flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-[#9EFF00]/30 hover:bg-white/10 transition-all cursor-crosshair">
-                          <div className="size-12 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#9EFF00]">
-                            <Layout className="size-6" />
-                          </div>
-                          <div>
-                            <h5 className="text-2xl font-black uppercase tracking-tight">Web Development</h5>
-                            <p className="text-slate-400 font-medium text-sm">Web Apps, E-Commerce, Static Sites & Modern Architecture.</p>
-                          </div>
-                        </div>
-
-                        <div className="group flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-[#9EFF00]/30 hover:bg-white/10 transition-all cursor-crosshair">
-                          <div className="size-12 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#9EFF00]">
-                            <BarChart3 className="size-6" />
-                          </div>
-                          <div>
-                            <h5 className="text-2xl font-black uppercase tracking-tight">Digital Marketing</h5>
-                            <p className="text-slate-400 font-medium text-sm">Strategic SEO, Targeted SEM & Performance Data Analytics.</p>
-                          </div>
-                        </div>
-
-                        <div className="group flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-[#9EFF00]/30 hover:bg-white/10 transition-all cursor-crosshair">
-                          <div className="size-12 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#9EFF00]">
-                            <Users className="size-6" />
-                          </div>
-                          <div>
-                            <h5 className="text-2xl font-black uppercase tracking-tight">Social Presence</h5>
-                            <p className="text-slate-400 font-medium text-sm">Optimization (SMO), Brand Management & Authority Building.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  </div>
-
-                  <div className="col-span-12 lg:col-span-6 relative flex justify-center lg:justify-end py-20 lg:py-0">
-                    <div className="relative scale-110 md:scale-125 lg:scale-100 min-h-[400px] flex items-center">
-                      <DisplayCards
-                        cards={[
-                          {
-                            icon: <Layout className="size-5 text-[#9EFF00]" />,
-                            title: "Web Dev",
-                            description: "Websites & E-Commerce",
-                            date: "Web Apps / Static / Coding",
-                            className: "[grid-area:stack] -translate-x-12 -translate-y-12 hover:-translate-y-28 transition-all duration-500 z-30",
-                          },
-                          {
-                            icon: <BarChart3 className="size-5 text-[#9EFF00]" />,
-                            title: "Marketing",
-                            description: "SEO, SEM & Growth",
-                            date: "Performance Marketing",
-                            className: "[grid-area:stack] translate-x-0 translate-y-0 z-20 hover:z-50 hover:-translate-y-16 transition-all duration-500 grayscale-[100%] hover:grayscale-0",
-                          },
-                          {
-                            icon: <Users className="size-5 text-[#9EFF00]" />,
-                            title: "Social",
-                            description: "SMO & Brand Strategy",
-                            date: "Optimization / Presence",
-                            className: "[grid-area:stack] translate-x-12 translate-y-12 z-10 hover:z-50 hover:-translate-y-4 transition-all duration-500 grayscale-[100%] hover:grayscale-0",
-                          },
-                        ]}
-                      />
-                    </div>
-                  </div>
+            <section className="py-24 md:py-32 bg-[#080808] border-y border-white/5 overflow-hidden" id="services">
+              <div className="max-w-[1400px] mx-auto px-4 md:px-6">
+                <div className="flex flex-col items-center text-center w-full mb-16 md:mb-24">
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                  >
+                    <p className="text-[#9EFF00] font-black uppercase tracking-[0.4em] mb-4 text-xs md:text-sm">Services Architecture</p>
+                    <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase leading-[0.8]">
+                      What I <br className="hidden md:block" /><span className="text-white/40 italic">Offer</span>
+                    </h2>
+                  </motion.div>
                 </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  <ExpandOnHover />
+                </motion.div>
               </div>
             </section>
 
@@ -479,9 +423,7 @@ export default function Home() {
                       <a className="hover:text-primary transition-colors flex items-center gap-2" href="#">
                         Twitter <span className="material-symbols-outlined text-[18px]">north_east</span>
                       </a>
-                      <a className="hover:text-primary transition-colors flex items-center gap-2" href="#">
-                        Dribbble <span className="material-symbols-outlined text-[18px]">north_east</span>
-                      </a>
+
                     </div>
                   </div>
                 </div>
