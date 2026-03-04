@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9EFF00",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0D0D0D",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "2px",
+                        "xl": "4px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .stacking-card {
+            position: sticky;
+            top: 100px;
+        }
+        .tight-heading {
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-[#F5F5F5] antialiased">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 border-b border-white/10 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-[120px] h-20 flex items-center justify-between">
+<a class="flex items-center gap-2" href="{{DATA:SCREEN:SCREEN_9}}">
+<span class="text-primary font-black text-2xl">SK.</span>
+<h1 class="text-sm font-bold tracking-widest uppercase">Subhan Khan</h1>
+</a>
+<div class="hidden md:flex items-center gap-12 text-[13px] font-medium uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_7}}">Work</a>
+<a class="hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_5}}">Philosophy</a>
+<a class="hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_6}}">Experience</a>
+<a class="bg-primary text-black px-6 py-2 font-bold hover:opacity-90 transition-opacity flex items-center justify-center" href="{{DATA:SCREEN:SCREEN_8}}">
+                    Get in touch
+                </a>
+</div>
+</div>
+</nav>
+<main class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-[120px]">
+<!-- Hero Section -->
+<section class="pt-48 pb-32 min-h-[80vh] flex flex-col justify-end">
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-12 lg:col-span-10">
+<p class="text-primary font-bold uppercase tracking-[0.2em] mb-8 text-sm">Editorial Designer &amp; Web Strategist</p>
+<h2 class="text-6xl md:text-8xl lg:text-[120px] font-black tight-heading mb-12">
+                        Intentional websites built for real business growth.
+                    </h2>
+<div class="flex items-center gap-4 text-slate-400">
+<span class="material-symbols-outlined">south</span>
+<span class="uppercase tracking-widest text-xs font-bold">Scroll to explore work</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Selected Work (Stacking Cards Layout) -->
+<section class="py-32" id="work">
+<div class="flex items-baseline justify-between mb-20 border-b border-white/10 pb-8">
+<h3 class="text-3xl font-bold uppercase tracking-tighter">Selected Work</h3>
+<span class="text-slate-500 font-mono">01 — 04</span>
+</div>
+<div class="space-y-[10vh]">
+<!-- Project 1 -->
+<div class="stacking-card bg-background-dark pt-8">
+<div class="group relative overflow-hidden border border-white/10">
+<div class="aspect-[16/9] w-full bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="Modern dark UI dashboard for financial analytics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX2VEs0ed2qRy3pUDZvw6EXHH8qP2XWCgyGZ6DqS8IjXz9ZegELzfsABlXQ2pi3EkbQ-Rl5mwbSw6yuKvr_FSRSVO0pNB1Gm9SIDUpUdS64CKFrVHF526eCN5q1js56XmyvJbtgg0O-73ZgE4eTT8Yemx9Z7OTEuj4Keh57LEn6a3MLPbcs7SGNnbkWTnLST-PR3DIAerAZn5S5p7BQaBS83KKZbTjf_y3FxvHrfYLHkg0juTsxRh8bZnLU8xJ2askbgEvCJUVfAnz"/>
+</div>
+<div class="p-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-background-dark">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-2">2024</p>
+<h4 class="text-4xl font-bold tracking-tighter">Project Alpha</h4>
+</div>
+<div class="text-right">
+<p class="text-slate-400 text-lg mb-4">E-commerce Platform Strategy &amp; Design</p>
+<button class="flex items-center gap-2 group/btn font-bold uppercase text-sm tracking-widest">
+                                    View Case Study 
+                                    <span class="material-symbols-outlined text-primary group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="stacking-card bg-background-dark pt-8">
+<div class="group relative overflow-hidden border border-white/10">
+<div class="aspect-[16/9] w-full bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="Minimalist architectural website design grid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpfnWxzMcHOubLHV5o8b8F5V1BIv_JgfzyzViBYiFS-BSHFby4yPpggrKTeiuaglUiuspqT6p1QBrEpQgD32YMJ6f2-tC7Cm56y-a2aSO9ro8q2ZnLYlQxl-RZC8MTstUVZ1k-fc7xB0EVmqHrJBC3KLSJVR9iiKNbYprRdiIP4WeTTQJWZM3Je9MWR_iU6hSh50_6y8TLwBH_Hif5LM2ekIVepeKprwQ9X6avjzYVdJb6fpHf1VipIN5o9arT5H-QN5VgbdQh_vZv"/>
+</div>
+<div class="p-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-background-dark">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-2">2023</p>
+<h4 class="text-4xl font-bold tracking-tighter">Beta Systems</h4>
+</div>
+<div class="text-right">
+<p class="text-slate-400 text-lg mb-4">SaaS Dashboard &amp; Identity</p>
+<button class="flex items-center gap-2 group/btn font-bold uppercase text-sm tracking-widest">
+                                    View Case Study 
+                                    <span class="material-symbols-outlined text-primary group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="stacking-card bg-background-dark pt-8">
+<div class="group relative overflow-hidden border border-white/10">
+<div class="aspect-[16/9] w-full bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="Editorial layout for high-end lifestyle brand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgGopWk1mD74cgZyRWdjVgCla7J01Dpqw8_ZtdX3ZagfrkPfjV0Nb911Ok4Z276nH_poc6QpGId_GfcD2Ok8cG_zem90XFCQACXVGQ1l84yK_YHoZOgJ1duslF2x67WZo48kkXU8gzk1wP8--a4ls3r5NX-B-vUfuxi9ytGlRw-TAZ1jTXPYsG8WKENk9jD31B1kwrmu3ASlvbTFi9h6GBBpHvFeszxhe8jGvkKpXrYYWAsbIQW0Qg_o2DNaeQ0k7Wh9TNLin7Vsrp"/>
+</div>
+<div class="p-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 bg-background-dark">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-2">2023</p>
+<h4 class="text-4xl font-bold tracking-tighter">Vanguard Media</h4>
+</div>
+<div class="text-right">
+<p class="text-slate-400 text-lg mb-4">Editorial Digital Experience</p>
+<button class="flex items-center gap-2 group/btn font-bold uppercase text-sm tracking-widest">
+                                    View Case Study 
+                                    <span class="material-symbols-outlined text-primary group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-32 border-t border-white/10" id="philosophy">
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-12 lg:col-span-4">
+<h3 class="text-sm font-bold uppercase tracking-widest text-primary mb-8 lg:mb-0">Philosophy</h3>
+</div>
+<div class="col-span-12 lg:col-span-8">
+<p class="text-3xl md:text-5xl font-medium leading-tight tracking-tight">
+                        I believe design is not just how it looks, but how it works for your bottom line. I bridge the gap between <span class="text-primary italic">high-end aesthetics</span> and <span class="border-b-4 border-primary">conversion-led strategy</span>. Every pixel is an intentional choice aimed at moving your business forward.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Capabilities & Experience -->
+<section class="py-32 border-t border-white/10" id="experience">
+<div class="grid grid-cols-12 gap-12">
+<!-- Capabilities -->
+<div class="col-span-12 lg:col-span-6">
+<h3 class="text-sm font-bold uppercase tracking-widest text-primary mb-12">Core Capabilities</h3>
+<ul class="space-y-6">
+<li class="flex items-baseline justify-between border-b border-white/5 pb-4">
+<span class="text-2xl font-bold">Web Strategy</span>
+<span class="text-slate-500 uppercase text-xs tracking-widest">Growth</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-white/5 pb-4">
+<span class="text-2xl font-bold">Editorial Design</span>
+<span class="text-slate-500 uppercase text-xs tracking-widest">Layout</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-white/5 pb-4">
+<span class="text-2xl font-bold">Brand Identity</span>
+<span class="text-slate-500 uppercase text-xs tracking-widest">Visuals</span>
+</li>
+<li class="flex items-baseline justify-between border-b border-white/5 pb-4">
+<span class="text-2xl font-bold">UI/UX Architecture</span>
+<span class="text-slate-500 uppercase text-xs tracking-widest">Product</span>
+</li>
+</ul>
+</div>
+<!-- Experience -->
+<div class="col-span-12 lg:col-span-6">
+<h3 class="text-sm font-bold uppercase tracking-widest text-primary mb-12">Selected Experience</h3>
+<div class="space-y-12">
+<div>
+<p class="text-slate-500 font-mono mb-2">2021 — PRESENT</p>
+<h4 class="text-xl font-bold uppercase tracking-tight">Lead Designer at Peak Strategy</h4>
+<p class="text-slate-400 mt-2">Spearheading digital transformation for Fortune 500 retail partners through data-driven design systems.</p>
+</div>
+<div>
+<p class="text-slate-500 font-mono mb-2">2018 — 2021</p>
+<h4 class="text-xl font-bold uppercase tracking-tight">Senior Product Designer at Flux</h4>
+<p class="text-slate-400 mt-2">Developed core SaaS interfaces focused on user retention and complex data visualization.</p>
+</div>
+<div>
+<p class="text-slate-500 font-mono mb-2">2016 — 2018</p>
+<h4 class="text-xl font-bold uppercase tracking-tight">Design Consultant (Freelance)</h4>
+<p class="text-slate-400 mt-2">Working with high-growth startups to establish market-ready visual identities and MVPs.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 border-t border-white/10 mb-20">
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-12 lg:col-span-10">
+<h2 class="text-5xl md:text-7xl lg:text-9xl font-black tight-heading mb-16">
+                        Let’s Build Something That Converts.
+                    </h2>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-12">
+<a class="text-3xl md:text-4xl font-bold border-b-2 border-primary pb-2 hover:text-primary transition-colors" href="mailto:hello@subhankhan.com">
+                            hello@subhankhan.com
+                        </a>
+<div class="flex gap-8 uppercase text-sm font-bold tracking-[0.2em]">
+<a class="hover:text-primary transition-colors flex items-center gap-2" href="#">
+                                LinkedIn <span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+<a class="hover:text-primary transition-colors flex items-center gap-2" href="#">
+                                Twitter <span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+<a class="hover:text-primary transition-colors flex items-center gap-2" href="#">
+                                Dribbble <span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-white/10 py-12">
+<div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-[120px] flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-500 text-xs font-mono uppercase tracking-widest">© 2024 SUBHAN KHAN — ALL RIGHTS RESERVED</p>
+<p class="text-slate-500 text-xs font-mono uppercase tracking-widest">DESIGNED FOR GROWTH</p>
+<button class="text-primary flex items-center gap-2 text-xs font-bold uppercase tracking-widest group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                Back to top <span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform">north</span>
+</button>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#9EFF00",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0D0D0D",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .grid-12 {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer" onclick="window.location.href='{{DATA:SCREEN:SCREEN_9}}'">
+<div class="size-8 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-background-dark font-bold">architecture</span>
+</div>
+<h1 class="text-xl font-black uppercase tracking-tighter">Subhan Khan</h1>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-bold uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="{{DATA:SCREEN:SCREEN_7}}">Work</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_5}}">Philosophy</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="{{DATA:SCREEN:SCREEN_6}}">Experience</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="hidden sm:block px-6 py-2 bg-primary text-background-dark text-xs font-black uppercase tracking-widest hover:bg-white transition-colors" onclick="window.location.href='{{DATA:SCREEN:SCREEN_8}}'">
+                    Get in touch
+                </button>
+<span class="material-symbols-outlined cursor-pointer md:hidden">menu</span>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+<!-- Hero Section -->
+<section class="grid-12 mb-20 md:mb-32">
+<div class="col-span-12 md:col-span-8">
+<h2 class="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-8">
+                    Selected <br/> <span class="text-primary italic">Portfolio</span>
+</h2>
+<p class="text-xl md:text-2xl text-slate-400 max-w-2xl leading-relaxed">
+                    A curated archive of editorial projects, digital experiences, and brand identities developed between 2020 and 2024.
+                </p>
+</div>
+</section>
+<!-- Filters -->
+<div class="flex flex-wrap gap-4 mb-12 border-b border-white/10 pb-8">
+<button class="px-6 py-2 bg-primary text-background-dark text-xs font-bold uppercase tracking-widest">All Work</button>
+<button class="px-6 py-2 border border-white/20 text-xs font-bold uppercase tracking-widest hover:border-primary transition-colors">Editorial</button>
+<button class="px-6 py-2 border border-white/20 text-xs font-bold uppercase tracking-widest hover:border-primary transition-colors">Digital</button>
+<button class="px-6 py-2 border border-white/20 text-xs font-bold uppercase tracking-widest hover:border-primary transition-colors">Branding</button>
+</div>
+<!-- Project Grid -->
+<div class="space-y-24 md:space-y-40">
+<!-- Featured Project 01 -->
+<article class="grid-12 group cursor-pointer">
+<div class="col-span-12 md:col-span-7 overflow-hidden">
+<div class="aspect-[16/10] bg-slate-800 transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist editorial magazine layout with bold typography" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtsfYU4HuXutCPSIxBCnY3MW5-2zkP2w8PR-7tEVw3qJbM0mtnq0pg8vzr7fxnz0lzX0yHv6LKiUVxE80oJjpttv3QZVBKumBZvHlSoDvNZxcGQTJMdwkeHxyZtO_Ny_7F2Fg6azeuvDg8Mps-vuBQJ82CRz5dRiwmIIre5e2qi4kTzTUVmm8xkbrxxwnPoOF418Q_kPtOjEZHBWAe-r62Kc4Q8d9YL2BaYtVxiNADcjtE81-cJqE24ygMKKKHB-_wti8sqY1hJM-_'); background-size: cover; background-position: center;">
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col justify-end pt-8 md:pt-0 md:pl-12">
+<div class="flex items-center gap-4 text-primary mb-4">
+<span class="text-xs font-bold uppercase tracking-widest">01 / Editorial</span>
+<div class="h-px w-12 bg-primary"></div>
+<span class="text-xs font-bold uppercase tracking-widest">2024</span>
+</div>
+<h3 class="text-4xl md:text-6xl font-black uppercase mb-6 leading-tight group-hover:text-primary transition-colors">Perspective Magazine</h3>
+<p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        Redesigning the visual language for a high-authority cultural publication. Focused on a 12-column Swiss grid system and aggressive negative space.
+                    </p>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest group-hover:translate-x-2 transition-transform" href="#">
+                            View Case Study <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Project 02 & 03 Split -->
+<div class="grid-12">
+<!-- Project 02 -->
+<article class="col-span-12 md:col-span-6 group cursor-pointer">
+<div class="aspect-square bg-slate-800 mb-8 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Monochrome digital interface design on a laptop screen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3r8Tr3MPjcH1DVqToLHEi_KQ4BGWRn7IXwkTXQWuh7R5N89QNhy7Kob0N41_pDR4zhKuXZBqzBPiy9YIxtgsNxq7ylJm2yaNbDKQb9u0Wgu9p4m6hnUgmfiQkDppmc3g6Bp976v70gUsX4L_sdnXmGlV7TMbj-yRXwDMXXiF_mcJTKMPknTfBEuscKmHSbBS-_z5MMuAjAC12xWCXhUAqsILVblwlii1XsAHte9gCizOAJ4SWFTAdDv4IOXuxEWm-9aULH41UAkOi');">
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 block">02 / Digital</span>
+<h3 class="text-2xl font-black uppercase group-hover:text-primary transition-colors">Vogue Digital Series</h3>
+</div>
+<span class="text-xs font-bold text-slate-500">2023</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed max-w-md">
+                        An immersive 12-part interactive storytelling experience exploring the intersection of AI and haute couture.
+                    </p>
+</article>
+<!-- Project 03 -->
+<article class="col-span-12 md:col-span-6 group cursor-pointer mt-12 md:mt-0">
+<div class="aspect-square bg-slate-800 mb-8 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Conceptual branding mockups on black texture background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXTQOIsYPvGS09xhE-GBjm1WYUxc44Fs4Lo2KKY4p1911UPnP9HOIm0B5uLI8DR4ldtbSkbKSWGAwZpmB_GAlXGryf6GuuzH6bBySuaWQw4eWS1g1JjelbrOxv8-lLu7UGi2v6QMa7SqDI1_rG8EuLfFuRAKie92NpaqL_VvvwOWmdIgB-ujo_w7hVXxMMAuKa3aPHChBzH-oByyrq6FsszLuynVgZvPNVP2Ikgm4Sgo9pGe6sDkjPLMq2NL9MW4IB9YWTNQZj0-Dk');">
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2 block">03 / Branding</span>
+<h3 class="text-2xl font-black uppercase group-hover:text-primary transition-colors">Avenue Retail Group</h3>
+</div>
+<span class="text-xs font-bold text-slate-500">2023</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed max-w-md">
+                        Visual identity for a luxury retail conglomerate, focusing on kinetic typography and minimalist iconography.
+                    </p>
+</article>
+</div>
+<!-- Full Width Project 04 -->
+<article class="group cursor-pointer relative">
+<div class="aspect-[21/9] bg-slate-800 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center opacity-60 transition-all duration-700 group-hover:opacity-100 group-hover:scale-105" data-alt="Modernist architecture photograph with dramatic shadows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOq7vM3vNiMrTEzcq5GrxWEL4HE92rq3Kq_CSU-0y2303xYXT5JTuD5yLaQUrKAFBhcEbHJN1CYpGFPMxy_UNEvR0q6AilSWWcsX9GPnhiZPh4YgLKDfIMGiiDSHQWukNoc-pmWGw1VQ1neFO_3qAk7jXTguFZ9M-Q7N0M0p2mrFB96SxzqHoICTiA6_6PpG85xKXXYiReR6ZywpVirervISGJoVtI9OE-3idwOJ2dEOVxXc2TxgzFvTd7ATkabTzO1V-x8_eUTqGO');">
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 bg-background-dark/20 group-hover:bg-transparent transition-colors">
+<span class="text-xs font-bold uppercase tracking-[0.4em] mb-4">Featured Highlight</span>
+<h3 class="text-5xl md:text-7xl font-black uppercase mb-6 tracking-tighter">Modernist Review</h3>
+<div class="flex items-center gap-4">
+<span class="h-px w-8 bg-white"></span>
+<p class="text-sm font-bold uppercase tracking-widest italic">Print — 2022</p>
+<span class="h-px w-8 bg-white"></span>
+</div>
+</div>
+</article>
+<!-- Project List View (Compact) -->
+<div class="border-t border-white/10 pt-20">
+<h4 class="text-xs font-bold uppercase tracking-[0.5em] text-slate-500 mb-12">Archive</h4>
+<div class="divide-y divide-white/10">
+<div class="group py-8 flex flex-col md:flex-row md:items-center justify-between cursor-pointer hover:bg-white/5 transition-colors px-4">
+<div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-12">
+<span class="text-xs font-bold text-slate-500">2022</span>
+<h5 class="text-2xl font-black uppercase group-hover:text-primary transition-colors">Global Sustainability Report</h5>
+</div>
+<div class="flex items-center gap-8 mt-4 md:mt-0">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Digital / Platform</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+</div>
+<div class="group py-8 flex flex-col md:flex-row md:items-center justify-between cursor-pointer hover:bg-white/5 transition-colors px-4">
+<div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-12">
+<span class="text-xs font-bold text-slate-500">2021</span>
+<h5 class="text-2xl font-black uppercase group-hover:text-primary transition-colors">Kinetic Motion Studies</h5>
+</div>
+<div class="flex items-center gap-8 mt-4 md:mt-0">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Experimental</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+</div>
+<div class="group py-8 flex flex-col md:flex-row md:items-center justify-between cursor-pointer hover:bg-white/5 transition-colors px-4">
+<div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-12">
+<span class="text-xs font-bold text-slate-500">2020</span>
+<h5 class="text-2xl font-black uppercase group-hover:text-primary transition-colors">Neo-Formalism Branding</h5>
+</div>
+<div class="flex items-center gap-8 mt-4 md:mt-0">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Branding</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark border-t border-white/10 py-24 mt-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid-12 mb-20">
+<div class="col-span-12 md:col-span-6">
+<h2 class="text-4xl md:text-6xl font-black uppercase mb-8">Ready to start a <br/><span class="text-primary italic">new chapter?</span></h2>
+<a class="text-2xl md:text-4xl font-light hover:text-primary transition-colors break-all" href="mailto:hello@subhankhan.com">hello@subhankhan.com</a>
+</div>
+<div class="col-span-12 md:col-span-6 md:text-right flex flex-col justify-end mt-12 md:mt-0">
+<div class="flex md:justify-end gap-8 text-sm font-bold uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">Behance</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600">
+<p>© 2024 Subhan Khan. All Rights Reserved.</p>
+<p class="mt-4 md:mt-0">Designed &amp; Curated with Precision</p>
+</div>
+</div>
+</footer>
+</body></html>

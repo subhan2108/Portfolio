@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  /* Lenis smooth scrolling core */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+  /* Custom Scroller (Track) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0D0D0D;
+  }
+
+  /* Custom Scroller (Thumb) - Matched to Theme */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(158, 255, 0, 0.2);
+    /* Faded Primary Lime */
+    border-radius: 10px;
+    border: 2px solid #0D0D0D;
+    /* Creates a gap effect */
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9EFF00 !important;
+    box-shadow: 0 0 15px rgba(158, 255, 0, 0.5);
+  }
+
+  /* Standard Scrollbar support */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(158, 255, 0, 0.3) #0D0D0D;
+  }
+}
+
+@layer utilities {
+  .stacking-card {
+    position: sticky;
+    top: 100px;
+  }
+
+  .tight-heading {
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+  }
+}
+
+body {
+  @apply bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-[#F5F5F5] antialiased min-h-screen overflow-x-hidden;
+}
+
+::selection {
+  background-color: #9EFF00;
+  color: #000;
+}
