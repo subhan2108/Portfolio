@@ -85,7 +85,7 @@ export function InteractiveScrollingHero() {
                     {/* Left Column: Text Content */}
                     <div className="relative flex flex-col justify-center py-10 md:py-20 md:pr-10 md:border-r border-white/5">
                         {/* Pagination Bars */}
-                        <div className="absolute top-24 left-0 flex space-x-2">
+                        <div className="absolute top-5 md:top-24 left-0 flex space-x-2">
                             {slidesData.map((_, index) => (
                                 <div
                                     key={index}
