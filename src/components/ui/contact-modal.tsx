@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Check, Loader2 } from "lucide-react";
+import { useState } from "react";
 
 interface ContactModalProps {
     isOpen: boolean;
@@ -7,6 +8,42 @@ interface ContactModalProps {
 }
 
 export function ContactModal({ isOpen, onClose }: ContactModalProps) {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        const form = e.currentTarget;
+        const data = new FormData(form);
+
+        try {
+            const response = await fetch("https://formspree.io/f/mgonwebd", {
+                method: "POST",
+                body: data,
+                headers: {
+                    Accept: "application/json",
+                },
+            });
+
+            if (response.ok) {
+                setIsSuccess(true);
+                form.reset();
+                setTimeout(() => {
+                    onClose();
+                    setTimeout(() => setIsSuccess(false), 500);
+                }, 3000);
+            } else {
+                alert("Oops! There was a problem submitting your form.");
+            }
+        } catch (error) {
+            alert("Oops! There was a problem submitting your form.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <AnimatePresence>
             {isOpen && (
@@ -50,11 +87,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         <div className="p-6 md:p-8">
                             <form
                                 className="space-y-6"
-                                onSubmit={(e) => {
-                                    e.preventDefault();
-                                    // TODO: Perform submit
-                                    onClose();
-                                }}
+                                onSubmit={handleSubmit}
                             >
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {/* Name Input */}
@@ -64,6 +97,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                                         </label>
                                         <input
                                             type="text"
+                                            name="name"
                                             required
                                             className="w-full bg-[#1A1A1A] border border-white/5 focus:border-[#9EFF00] rounded-xl px-4 py-3 text-white placeholder-white/20 outline-none transition-colors"
                                             placeholder="John Doe"
@@ -76,6 +110,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                                         </label>
                                         <input
                                             type="email"
+                                            name="email"
                                             required
                                             className="w-full bg-[#1A1A1A] border border-white/5 focus:border-[#9EFF00] rounded-xl px-4 py-3 text-white placeholder-white/20 outline-none transition-colors"
                                             placeholder="john@example.com"
@@ -88,7 +123,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest pl-1">
                                         What can I help you with?
                                     </label>
-                                    <select className="w-full bg-[#1A1A1A] border border-white/5 focus:border-[#9EFF00] rounded-xl px-4 py-3 text-white outline-none transition-colors appearance-none">
+                                    <select name="service" className="w-full bg-[#1A1A1A] border border-white/5 focus:border-[#9EFF00] rounded-xl px-4 py-3 text-white outline-none transition-colors appearance-none">
                                         <option value="" disabled selected>
                                             Select a service
                                         </option>
@@ -106,6 +141,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                                         Project Details
                                     </label>
                                     <textarea
+                                        name="message"
                                         required
                                         rows={4}
                                         className="w-full bg-[#1A1A1A] border border-white/5 focus:border-[#9EFF00] rounded-xl px-4 py-3 text-white placeholder-white/20 outline-none transition-colors resize-none"
@@ -116,10 +152,22 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                                 {/* Submit Button */}
                                 <button
                                     type="submit"
-                                    className="w-full flex items-center justify-center gap-3 py-4 rounded-xl bg-white text-black font-black uppercase text-sm tracking-widest hover:bg-[#9EFF00] transition-colors duration-300"
+                                    disabled={isSubmitting || isSuccess}
+                                    className="w-full flex items-center justify-center gap-3 py-4 rounded-xl bg-white text-black font-black uppercase text-sm tracking-widest hover:bg-[#9EFF00] transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
-                                    Send Message
-                                    <span className="material-symbols-outlined text-[18px]">send</span>
+                                    {isSubmitting ? (
+                                        <>
+                                            Sending... <Loader2 className="size-5 animate-spin" />
+                                        </>
+                                    ) : isSuccess ? (
+                                        <>
+                                            Message Sent! <Check className="size-5" />
+                                        </>
+                                    ) : (
+                                        <>
+                                            Send Message <span className="material-symbols-outlined text-[18px]">send</span>
+                                        </>
+                                    )}
                                 </button>
                             </form>
                         </div>
