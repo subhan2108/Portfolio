@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useModal } from '../contexts/ModalContext';
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { openContact } = useModal();
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
@@ -54,12 +56,12 @@ export default function Navbar() {
                 </nav>
 
                 <div className="flex items-center gap-6">
-                    <a
-                        href="mailto:hello@subhankhan.com"
+                    <button
+                        onClick={openContact}
                         className="hidden sm:block px-6 py-2 bg-primary text-background-dark text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all duration-300 active:scale-95"
                     >
                         Get in touch
-                    </a>
+                    </button>
 
                     {/* Mobile Menu Toggle */}
                     <button
@@ -94,15 +96,18 @@ export default function Navbar() {
                                     {link.name}
                                 </motion.a>
                             ))}
-                            <motion.a
+                            <motion.button
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: navLinks.length * 0.1 }}
-                                href="mailto:hello@subhankhan.com"
+                                onClick={() => {
+                                    setIsMenuOpen(false);
+                                    openContact();
+                                }}
                                 className="px-10 py-4 bg-primary text-background-dark text-sm font-black uppercase tracking-widest rounded-full"
                             >
                                 Let's Talk
-                            </motion.a>
+                            </motion.button>
                         </nav>
                     </motion.div>
                 )}

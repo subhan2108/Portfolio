@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useModal } from '../contexts/ModalContext';
 import TeamMembers from '../components/TeamMembers';
 import ParallaxSection from '../components/ui/parallax-scrolling-effect';
 import { InteractiveScrollingHero } from '../components/ui/interactive-scrolling-story-component';
@@ -50,6 +51,7 @@ const AccordionItem = ({ title, children, isOpen, onClick }: { title: string; ch
 export default function Home() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [isLoading, setIsLoading] = useState(true);
+  const { openContact } = useModal();
 
   useEffect(() => {
     // Simulate initial sequence loading for the wow factor
@@ -131,7 +133,7 @@ export default function Home() {
                       <p className="text-slate-400 text-sm md:text-base max-w-xl text-center md:text-left leading-relaxed font-medium">
                         Crafting high-performance, growth-focused web architectures with a focus on speed, precision, and modern design standards.
                       </p>
-                      <button className="flex items-center gap-4 py-3 px-8 rounded-full bg-white text-black font-black uppercase text-[10px] tracking-widest hover:bg-[#9EFF00] transition-all duration-300 active:scale-95 whitespace-nowrap">
+                      <button onClick={openContact} className="flex items-center gap-4 py-3 px-8 rounded-full bg-white text-black font-black uppercase text-[10px] tracking-widest hover:bg-[#9EFF00] transition-all duration-300 active:scale-95 whitespace-nowrap">
                         Explore Work
                         <span className="material-symbols-outlined text-[16px]">north_east</span>
                       </button>
@@ -168,7 +170,7 @@ export default function Home() {
                       <p className="text-slate-400 text-sm md:text-base max-w-xl text-center md:text-left leading-relaxed font-medium">
                         Driving measurable business growth through data-backed SEO, precision-targeted ads, and strategic visibility optimization.
                       </p>
-                      <button className="flex items-center gap-4 py-3 px-8 rounded-full bg-white text-black font-black uppercase text-[10px] tracking-widest hover:bg-[#9EFF00] transition-all duration-300 active:scale-95 whitespace-nowrap">
+                      <button onClick={openContact} className="flex items-center gap-4 py-3 px-8 rounded-full bg-white text-black font-black uppercase text-[10px] tracking-widest hover:bg-[#9EFF00] transition-all duration-300 active:scale-95 whitespace-nowrap">
                         Explore Growth
                         <span className="material-symbols-outlined text-[16px]">north_east</span>
                       </button>
@@ -205,7 +207,7 @@ export default function Home() {
                       <p className="text-slate-400 text-sm md:text-base max-w-xl text-center md:text-left leading-relaxed font-medium">
                         Building brand authority and emotional connections through high-quality content production and strategic community engagement.
                       </p>
-                      <button className="flex items-center gap-4 py-3 px-8 rounded-full bg-white text-black font-black uppercase text-[10px] tracking-widest hover:bg-[#9EFF00] transition-all duration-300 active:scale-95 whitespace-nowrap">
+                      <button onClick={openContact} className="flex items-center gap-4 py-3 px-8 rounded-full bg-white text-black font-black uppercase text-[10px] tracking-widest hover:bg-[#9EFF00] transition-all duration-300 active:scale-95 whitespace-nowrap">
                         Explore Presence
                         <span className="material-symbols-outlined text-[16px]">north_east</span>
                       </button>
