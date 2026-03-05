@@ -74,16 +74,16 @@ export function InteractiveScrollingHero() {
             style={{ height: `${slidesData.length * 100}vh` }}
         >
             <div
-                className="sticky top-0 h-screen w-full flex flex-col items-center justify-center transition-colors duration-700 ease-in-out"
+                className="sticky top-0 h-[100dvh] w-full flex flex-col items-center justify-center transition-colors duration-700 ease-in-out overflow-hidden"
                 style={{
                     backgroundColor: slidesData[activeIndex].bgColor,
                     color: slidesData[activeIndex].textColor
                 }}
             >
-                <div className="grid grid-cols-1 md:grid-cols-2 h-auto md:h-full w-full max-w-[1400px] mx-auto px-6 py-20 md:py-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 h-auto md:h-full w-full max-w-[1400px] mx-auto px-6 py-10 md:py-0">
 
                     {/* Left Column: Text Content */}
-                    <div className="relative flex flex-col justify-center py-20 md:pr-10 md:border-r border-white/5">
+                    <div className="relative flex flex-col justify-center py-10 md:py-20 md:pr-10 md:border-r border-white/5">
                         {/* Pagination Bars */}
                         <div className="absolute top-24 left-0 flex space-x-2">
                             {slidesData.map((_, index) => (
@@ -95,7 +95,7 @@ export function InteractiveScrollingHero() {
                             ))}
                         </div>
 
-                        <div className="relative h-[400px] w-full mt-10">
+                        <div className="relative h-[250px] md:h-[400px] w-full mt-6 md:mt-10">
                             {slidesData.map((slide, index) => (
                                 <div
                                     key={index}
@@ -104,15 +104,15 @@ export function InteractiveScrollingHero() {
                                         : 'opacity-0 translate-y-10'
                                         }`}
                                 >
-                                    <span className="text-[#9EFF00] font-mono text-xs tracking-[0.4em] uppercase mb-4 block">
+                                    <span className="text-[#9EFF00] font-mono text-xs tracking-[0.4em] uppercase mb-2 md:mb-4 block">
                                         Service {index + 1}
                                     </span>
-                                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.1] text-white">
+                                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[1.1] text-white">
                                         {slide.title.split(' ').map((word, i) => (
-                                            <span key={i} className={i === 1 ? 'inline-block text-[#9EFF00]' : 'inline-block'}>{word}&nbsp;</span>
+                                            <span key={i} className={i === 1 ? 'text-[#9EFF00]' : ''}>{word} </span>
                                         ))}
                                     </h2>
-                                    <p className="mt-6 text-lg text-slate-400 font-medium leading-relaxed max-w-md">
+                                    <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-400 font-medium leading-relaxed max-w-md">
                                         {slide.description}
                                     </p>
                                 </div>
@@ -123,8 +123,8 @@ export function InteractiveScrollingHero() {
                     </div>
 
                     {/* Right Column: Image Content */}
-                    <div className="flex items-center justify-center relative mt-10 md:mt-0" style={gridPatternStyle}>
-                        <div className="relative w-full md:w-[80%] aspect-square md:h-[70vh] overflow-hidden shadow-[0_0_100px_rgba(158,255,0,0.1)] grayscale hover:grayscale-0 transition-all duration-700 rounded-2xl md:rounded-none">
+                    <div className="flex items-center justify-center relative mt-4 md:mt-0" style={gridPatternStyle}>
+                        <div className="relative w-full md:w-[80%] aspect-[4/3] md:aspect-square md:h-[70vh] overflow-hidden shadow-[0_0_100px_rgba(158,255,0,0.1)] grayscale hover:grayscale-0 transition-all duration-700 rounded-2xl md:rounded-none">
                             <div
                                 className="absolute top-0 left-0 w-full h-full transition-transform duration-1000 ease-[cubic-bezier(0.19,1,0.22,1)]"
                                 style={{ transform: `translateY(-${activeIndex * 100}%)` }}

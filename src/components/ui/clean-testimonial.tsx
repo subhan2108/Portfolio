@@ -92,7 +92,7 @@ export function Testimonial() {
     return (
         <div
             ref={containerRef}
-            className="relative w-full max-w-2xl mx-auto py-20 px-8 bg-transparent"
+            className="relative w-full max-w-2xl mx-auto py-16 md:py-20 px-4 md:px-8 bg-transparent"
             style={{ cursor: "none" }}
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovered(true)}
@@ -181,7 +181,7 @@ export function Testimonial() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0, transition: { duration: 0.2 } }}
-                        className="text-lg md:text-4xl font-black leading-[1.1] md:leading-[1.1] tracking-tight text-white uppercase italic"
+                        className="text-2xl sm:text-3xl md:text-5xl lg:text-5xl font-black leading-[1.2] md:leading-[1.15] tracking-tight text-white uppercase italic break-words"
                     >
                         <SplitText text={`"${currentTestimonial.quote}"`} />
                     </motion.blockquote>

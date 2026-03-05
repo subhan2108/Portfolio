@@ -121,7 +121,7 @@ export default function Home() {
                         >
                           SERVICE — 01
                         </motion.span>
-                        <h4 className="text-[8vw] md:text-[6vw] font-black tracking-tighter uppercase leading-none text-white text-center">
+                        <h4 className="text-[9vw] md:text-[6vw] font-black tracking-tighter uppercase leading-[1.1] text-white text-center flex flex-col md:block">
                           Web <span className="text-transparent border-white stroke-white" style={{ WebkitTextStroke: '2px white' }}>Development</span>
                         </h4>
                       </div>
@@ -158,7 +158,7 @@ export default function Home() {
                         >
                           SERVICE — 02
                         </motion.span>
-                        <h4 className="text-[8vw] md:text-[6vw] font-black tracking-tighter uppercase leading-none text-white text-center">
+                        <h4 className="text-[9vw] md:text-[6vw] font-black tracking-tighter uppercase leading-[1.1] text-white text-center flex flex-col md:block">
                           Digital <span className="text-transparent border-white stroke-white" style={{ WebkitTextStroke: '2px white' }}>Marketing</span>
                         </h4>
                       </div>
@@ -195,8 +195,8 @@ export default function Home() {
                         >
                           SERVICE — 03
                         </motion.span>
-                        <h4 className="text-[8vw] md:text-[6vw] font-black tracking-tighter uppercase leading-none text-white text-center">
-                          Social Media <br /><span className="text-transparent border-white stroke-white" style={{ WebkitTextStroke: '2px white' }}>Management</span>
+                        <h4 className="text-[9vw] md:text-[6vw] font-black tracking-tighter uppercase leading-[1.1] text-white text-center flex flex-col md:block">
+                          Social Media <span className="text-transparent border-white stroke-white" style={{ WebkitTextStroke: '2px white' }}>Management</span>
                         </h4>
                       </div>
                     </div>
@@ -287,11 +287,11 @@ export default function Home() {
             <ParallaxSection backgroundImage="https://images.unsplash.com/photo-1619410283995-43d9134e7656?q=80&w=2940&auto=format&fit=crop">
               {/* About Section */}
               <section className="py-20 md:py-32" id="about">
-                <div className="grid grid-cols-12 gap-6">
-                  <div className="col-span-12 lg:col-span-4">
+                <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6">
+                  <div className="col-span-1 lg:col-span-4">
                     <h3 className="text-sm font-bold uppercase tracking-widest text-primary mb-6 lg:mb-0">About Me</h3>
                   </div>
-                  <div className="col-span-12 lg:col-span-8">
+                  <div className="col-span-1 lg:col-span-8">
                     <p className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight mb-8 text-white">
                       I am a <span className="text-primary italic">Web Developer</span> and <span className="border-b-4 border-primary">SEO Specialist</span> based in New Delhi with hands-on experience in building responsive websites and optimizing them for search engines.
                     </p>
@@ -381,8 +381,8 @@ export default function Home() {
             {/* Testimonials Section */}
             <section className="py-24 md:py-48 bg-[#0D0D0D] border-t border-white/5 overflow-hidden" id="testimonials">
               <div className="max-w-[1400px] mx-auto px-6">
-                <div className="grid grid-cols-12 gap-12 items-center">
-                  <div className="col-span-12 lg:col-span-4">
+                <div className="flex flex-col lg:grid lg:grid-cols-12 gap-12 lg:items-center">
+                  <div className="col-span-1 lg:col-span-4">
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
@@ -397,7 +397,7 @@ export default function Home() {
                       </p>
                     </motion.div>
                   </div>
-                  <div className="col-span-12 lg:col-span-8">
+                  <div className="col-span-1 lg:col-span-8">
                     <Testimonial />
                   </div>
                 </div>
@@ -407,8 +407,8 @@ export default function Home() {
 
             {/* Contact Section */}
             <section className="py-32 border-t border-white/10 mb-20" id="contact">
-              <div className="grid grid-cols-12 gap-6">
-                <div className="col-span-12 lg:col-span-10">
+              <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6">
+                <div className="col-span-1 lg:col-span-10">
                   <h2 className="text-5xl md:text-7xl lg:text-9xl font-black tight-heading mb-16">
                     Let’s Build Something That Converts.
                   </h2>
