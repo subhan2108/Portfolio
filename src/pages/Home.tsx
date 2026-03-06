@@ -333,7 +333,7 @@ export default function Home() {
                     )
                   },
                   {
-                    title: "2023 - 2024",
+                    title: "2025",
                     content: (
                       <div>
                         <h4 className="text-3xl font-black uppercase text-white mb-4 tracking-tighter">SEO Specialist Intern</h4>
@@ -360,11 +360,11 @@ export default function Home() {
                           Developed high-performance React frontends including the Pathan Gadget application, achieving <span className="text-white">99+ Lighthouse scores</span> and seamless user experiences.
                         </p>
                         <div className="grid grid-cols-2 gap-4">
-                          <img
+                          {/* <img
                             src="https://images.unsplash.com/photo-1627389955609-7020dec776f2?q=80&w=2070&auto=format&fit=crop"
                             alt="Gadget Project"
                             className="rounded-lg h-40 w-full object-cover border border-white/5 opacity-80"
-                          />
+                          /> */}
                           <img
                             src="https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=2070&auto=format&fit=crop"
                             alt="SEO Stats"

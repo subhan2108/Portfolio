@@ -6,30 +6,24 @@ const TeamMembers = () => {
             image: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&q=80&w=400',
             text: 'Driving the vision and strategy, focusing on building high-converting architectures for ambitious brands.',
             name: 'Subhan Khan',
-            jobtitle: 'Founder & Full Stack Dev',
+            jobtitle: 'Web Developer',
             rating: 5,
         },
         {
             image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&q=80&w=400',
             text: 'Specializes in scaling systems and managing complex server-side infrastructures and APIs.',
-            name: 'Ethan Smith',
-            jobtitle: 'Backend Engineer',
+            name: 'Mursalin Khan',
+            jobtitle: 'Social Media Manager',
             rating: 5,
         },
         {
             image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&q=80&w=400',
             text: 'Bringing pixels to life with obsessive attention to micro-interactions and high-performance rendering.',
-            name: 'Liam Johnson',
+            name: 'Faizan Khan',
             jobtitle: 'UI/UX Interactive Designer',
             rating: 5,
         },
-        {
-            image: 'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?auto=format&fit=crop&q=80&w=400',
-            text: 'Optimizing funnels, A/B testing, and leading digital marketing strategies to maximize ROI.',
-            name: 'Ava Martinez',
-            jobtitle: 'Growth Marketer',
-            rating: 5,
-        },
+
     ];
 
     return (
